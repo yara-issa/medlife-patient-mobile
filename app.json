@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "MedLife",
+    "slug": "medlife-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "medlife-app",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFFFFF"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSCameraUsageDescription": "MedLife needs camera access so you can take a profile photo.",
+        "NSPhotoLibraryUsageDescription": "MedLife needs access to your photo library so you can choose a profile photo.",
+        "NSPhotoLibraryAddUsageDescription": "MedLife needs permission to save photos to your library."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/icon.png",
+        "backgroundColor": "#006D77"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.READ_MEDIA_IMAGES"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-font",
+      "expo-web-browser",
+      "expo-camera",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "MedLife needs access to your photo library so you can choose a profile photo.",
+          "cameraPermission": "MedLife needs camera access so you can take a profile photo."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}
